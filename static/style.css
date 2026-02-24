@@ -14,6 +14,7 @@
 :root {
     --color-accent: oklch(65% 50% 0); /* Primary accent color in OKLCH format */
     --border-gray: oklch(80% 3% 200); /* Gray for borders */
+    --reading-box: oklch(81.28% 0.0424 4.93);
     /* ADD the rest of the color definitions here if needed! */
 }
 
@@ -207,4 +208,21 @@ h1, h2, h3, h4, h5, h6 {
 
 #resume article {
     margin-bottom: 1em;
+}
+
+
+/* Styling the Home page */
+
+.aboutMe{
+    display: flex;
+    gap: 2em;
+}
+
+.currentReading {
+    max-width: 30rem;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: var(--reading-box);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }

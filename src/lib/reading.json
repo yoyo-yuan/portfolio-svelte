@@ -1,0 +1,17 @@
+[
+	{
+		"title": "The Dream of the Red Chamber",
+		"author": "Cao Xueqin",
+		"image": "images/The Dream of the Red Chamber.jpg"
+	},
+    {
+		"title": "A Room with a View",
+		"author": "E. M. Forster",
+		"image": "images/A Room with a View.jpg"
+	},
+    {
+		"title": "Macbeth",
+		"author": "William Shakespeare",
+		"image": "images/Macbeth.jpg"
+	}
+]
