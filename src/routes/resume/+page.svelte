@@ -49,16 +49,16 @@
 	</header>
 	<ul>
 		<li>
-			<strong>Awards: </strong>USAMO Qualifier, Akamai AMC 12B Certificate of Excellence (Top 5 Female Scorer in Texas)
+			<strong>Awards:</strong> USAMO Qualifier, Akamai AMC 12B Certificate of Excellence (Top 5 Female Scorer in Texas)
 		</li>
 		<li>
-			<strong>Skills: </strong>Python, MATLAB, SQL, Git, R, C++, Machine Learning, Data Analysis, Financial Market
+			<strong>Skills:</strong> Python, MATLAB, SQL, Git, R, C++, Machine Learning, Data Analysis, Financial Market
 		</li>
 		<li>
-			<strong>Languages: </strong>English (Fluent), Mandarin (Fluent), Spanish (Proficient)
+			<strong>Languages:</strong> English (Fluent), Mandarin (Fluent), Spanish (Proficient)
 		</li>
 		<li>
-			<strong>Interests: </strong>Archery, Fencing, Sailing, Rifle, Video Games (Esports), Hand Crafting, Origami
+			<strong>Interests:</strong> Archery, Fencing, Sailing, Rifle, Video Games (Esports), Hand Crafting, Origami
 		</li>
 	</ul>
 </section>
