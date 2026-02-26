@@ -29,7 +29,7 @@
 </label>
 <nav>
     {#each pages as p}
-        <a href={base+p.url}
+        <a href={p.url.startsWith("http") ? p.url : base+p.url}
            class:current={p.url === "/"
            ? $page.url.pathname === (base + "/")
            : $page.url.pathname.startsWith(base + p.url)}
