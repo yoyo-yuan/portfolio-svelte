@@ -1,17 +1,10 @@
 <script>
-  import projects from "$lib/projects.json";
-  import reading from "$lib/reading.json";
-  import Project from "$lib/Project.svelte";
-  import ReadingItem from "$lib/ReadingItem.svelte";
+    import projects from "$lib/projects.json";
+    import reading from "$lib/reading.json";
+    import Project from "$lib/Project.svelte";
+    import ReadingItem from "$lib/ReadingItem.svelte";
 </script>
 
-<nav>
-    <a href="." class="current">Home</a>
-    <a href="projects">Projects</a>
-    <a href="contact">Contact</a>
-    <a href="resume">Resume</a>
-    <a href="https://github.com/yoyo-yuan" target="_blank">GitHub</a>
-</nav>
 <div class="aboutMe">
     <div class="intro">
         <h1>Yoyo Yuan</h1>
