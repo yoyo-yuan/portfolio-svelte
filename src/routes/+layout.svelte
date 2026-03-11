@@ -43,10 +43,6 @@
 <slot />
 
 <style>
-    /* :root {
-        color-scheme: dark;
-    } */
-
     .color-scheme-switch {
         position: absolute;
         top: 1rem;

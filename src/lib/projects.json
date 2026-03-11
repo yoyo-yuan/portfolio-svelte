@@ -1,62 +1,87 @@
 [
 	{
-		"title": "Lorem ipsum dolor sit.",
-		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
-		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolor quos, quod assumenda explicabo odio, nobis ipsa laudantium quas eum veritatis ullam sint porro minima modi molestias doloribus cumque odit."
+		"title": "6.C35 A2: Exploratory Data Analysis",
+		"link": "/A2",
+		"year": 2026,
+		"image": "images/A2/Avg Corp Own Rate vs. Race Distribution.png",
+		"description": "Exploratory data analysis of Boston housing ownership (2004 to 2024) that visualizes how corporate-owned and owner-occupied rates shift over time and across neighborhoods.",
+		"story": "This project began as an open-ended exploration of how housing ownership patterns vary across Boston. By iteratively asking questions and building visualizations, I traced differences in corporate ownership, owner occupancy, and neighborhood-level change over time. The process helped me move from broad curiosity to more focused insights about how geography and demographics shape housing trends."
 	},
 	{
-		"title": "Architecto minima sed omnis?",
-		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
-		"description": "Est, reiciendis aspernatur debitis maxime et itaque animi sit quod quo, tempore incidunt tempora dignissimos exercitationem enim numquam quam quaerat optio laborum ut unde hic delectus laboriosam? Quasi, cupiditate corporis."
+		"title": "6.C35 A3: Visualization Critique & Redesign",
+		"year": 2026,
+		"image": "images/A3/6.C35 A3 Final Visualization.png",
+		"description": "Critiqued and redesigned a COVID-19 data visualization, using iterative sketching and visual analysis to improve interpretability,temporal comparison, and communication of magnitude.",
+		"story": "I started by analyzing how the original visualization communicated seasonality and change over time, then identified places where the design made comparison and magnitude harder to read. Through critique and sketching, I developed a redesign that preserved the core idea while making the chart more legible and interpretable. The project showed me how even small visual decisions can strongly affect what patterns viewers notice first."
 	},
 	{
-		"title": "Asperiores rem repellendus doloremque.",
-		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
-		"description": "Eligendi tenetur quae quos recusandae est. Cumque, voluptatem. Quo nihil dignissimos molestiae explicabo praesentium aspernatur debitis, illo rerum possimus quam ducimus earum nulla officiis maiores itaque repellat corporis soluta labore?"
+		"title": "6.C35 A4: Persuasive or Deceptive Visualization?",
+		"year": 2026,
+		"image": "images/A4/For the Proposition Visualization.png",
+		"description": "Designed contrasting visualizations from the same dataset to examine how distinct design choices can support different narratives while raising questions about visualization ethics.",
+		"story": "Using the same dataset, I created two visualizations that pushed viewers toward very different conclusions through changes in framing, emphasis, and design choices. The goal was to show how visualizations do not just present information, but also shape interpretation. This project made the ethical dimension of data storytelling much more concrete by demonstrating how easily design can persuade, or mislead."
 	},
 	{
-		"title": "Laudantium reprehenderit placeat perspiciatis.",
-		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
-		"description": "Quo minus perferendis nulla corrupti repellat dolorem dolore assumenda sit minima ducimus quidem ullam, id ipsa dicta tempora laborum officiis unde possimus cumque nobis alias inventore! Ullam repudiandae iusto nam."
+		"title": "Moonlight Queue Optimizer",
+		"year": 2021,
+		"image": "images/Projects/Moonlight Queue Optimizer.jpg",
+		"description": "Modeling the fastest path through an imaginary late-night bakery with unreasonable demand for croissants.",
+		"story": "The problem began with a line out the door and a cashier moving at the speed of philosophical reflection. I started sketching customer flow patterns on napkins and discovered that most inefficiency came from people deciding what they wanted only when it was too late. The experiment became a study in bottlenecks, patience, and the strange emotional intensity of pastry logistics. The conclusion was simple: systems fail when they assume humans arrive prepared."
 	},
 	{
-		"title": "Consequuntur autem eos facere.",
-		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
-		"description": "Laborum alias ea unde harum aspernatur? Molestiae, veritatis, possimus, numquam ex excepturi quod ducimus sit odit optio quibusdam sequi aliquid itaque tempore perspiciatis placeat expedita vero voluptates. Sit, aspernatur sint!"
+		"title": "Pigeon Transit Authority",
+		"year": 2022,
+		"image": "images/Projects/Pigeon Transit Authority.jpg",
+		"description": "Designing a speculative public transportation network optimized for pigeons instead of people.",
+		"story": "Cities already belong to pigeons in every practical sense, but their infrastructure remains embarrassingly underdeveloped. I imagined a transit system with seed-based incentives, roof-to-roof express routes, and weather-sensitive landing zones. What started as a joke turned into a surprisingly serious exercise in thinking about mobility from a nonhuman perspective. It made one point very clearly: every network reveals who it was built for, and who it quietly ignores."
 	},
 	{
-		"title": "Quos sint quaerat omnis?",
-		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
-		"description": "Est neque, velit nam rerum error odio voluptates voluptatem magnam laboriosam ad? Doloribus, id et itaque unde porro totam ullam quaerat blanditiis odit animi eveniet aut, voluptate velit iure odio."
+		"title": "Museum of Misplaced Keys",
+		"year": 2020,
+		"image": "images/Projects/Museum of Misplaced Keys.webp",
+		"description": "Cataloging fictional lost keys to build an archive of tiny everyday mysteries.",
+		"story": "A lost key is a very small object with a disproportionate emotional radius. Each missing key suggests a locked door, a missed routine, or a moment of mild domestic chaos. The project imagined an archive where every unlabeled key came with a speculative history, somewhere between detective work and storytelling. In the process, it became less about keys and more about the invisible systems of trust and access that structure ordinary life."
 	},
 	{
-		"title": "Iste ipsam magni fuga!",
-		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
-		"description": "Velit omnis suscipit nemo quia? Iste maiores numquam labore quia nemo eveniet odit, modi magnam? Architecto officia sint est. Architecto iste minima consequuntur explicabo illo error sed at dolore nostrum!"
+		"title": "Weather Forecasts for Indoor Moods",
+		"year": 2023,
+		"image": "images/Projects/Weather Forecasts for Indoor Moods.webp",
+		"description": "Creating a mock meteorological system that predicts the emotional climate of rooms rather than the outdoors.",
+		"story": "Some rooms are sunny even under fluorescent lights, while others feel overcast no matter how many windows they have. I built a playful framework for forecasting tension, focus, comfort, and collective awkwardness using the language of weather reports. The premise was absurd, but the observations felt uncomfortably real. It ended up being a way to think about atmosphere as a design problem, not just an accidental byproduct of architecture."
 	},
 	{
-		"title": "Ipsum, aperiam magni? Nobis.",
-		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
-		"description": "Delectus magni, vel, quod mollitia hic rem temporibus, sint doloribus tenetur qui dolores tempore quisquam fuga nobis recusandae molestiae ipsum nostrum maxime eaque dicta aperiam eum quas beatae. At, neque."
+		"title": "The Department of Unsent Postcards",
+		"year": 2024,
+		"image": "images/Projects/The Department of Unsent Postcards.jpg",
+		"description": "Imagining a bureaucracy dedicated to processing postcards that were bought with good intentions and never mailed.",
+		"story": "Every postcard begins as a promise: I was here, I thought of you, I meant to send proof. Most of them never make it past that stage. This project treated unsent postcards as a category of unfinished communication and built a fictional office to sort them by excuse, destination, and emotional delay. Beneath the humor was a quieter question about how often affection fails for logistical reasons instead of emotional ones."
 	},
 	{
-		"title": "Dicta nihil odit illo?",
-		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
-		"description": "Vitae quos laudantium officiis rerum, accusamus delectus aspernatur quas nulla, magni sed, excepturi saepe incidunt laboriosam alias at aliquam atque quisquam autem nesciunt. Minus, reprehenderit odit nam illo natus aspernatur?"
+		"title": "Cloud Naming Convention Committee",
+		"year": 2025,
+		"image": "images/Projects/Cloud Naming Convention Committee.webp",
+		"description": "Proposing an overly formal taxonomy for clouds based on personality, attitude, and dramatic timing.",
+		"story": "Traditional cloud categories are scientifically useful but emotionally incomplete. Some clouds hover with purpose, some drift like they have nowhere important to be, and some clearly arrive just to make a point. I invented a naming system that classified them less by altitude and more by temperament. The joke carried farther than expected, becoming a reflection on how humans always invent labels that reveal as much about ourselves as the things we classify."
 	},
 	{
-		"title": "Vel earum nulla facilis.",
-		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
-		"description": "Aut voluptatem sint atque corrupti accusamus necessitatibus possimus et, itaque nulla id deleniti nemo repellendus asperiores molestias laudantium, mollitia ad dicta. Laboriosam, itaque. Quos corporis, perferendis natus officiis beatae qui."
+		"title": "Escalator Etiquette Simulator",
+		"year": 2022,
+		"image": "images/Projects/Escalator Etiquette Simulator.jpg",
+		"description": "Simulating the fragile social order of standing, walking, and hesitating on escalators.",
+		"story": "Escalators look mechanical, but their real complexity is social. Everyone arrives with a private theory about where to stand, how fast to move, and whether pausing at the top is acceptable behavior. I built a speculative simulator around these tiny collisions of expectation. The result was a study in unspoken rules, public choreography, and how quickly civilization can weaken when one person forgets how spatial courtesy works."
 	},
 	{
-		"title": "Nobis iste neque quaerat.",
-		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
-		"description": "Quos, recusandae, sit rerum velit nostrum nihil quisquam tempora repellat sed quibusdam facilis. Assumenda quaerat ab, nesciunt odio facere sit, ipsa necessitatibus tempora, maiores commodi sed quae provident deserunt at?"
+		"title": "Archive of Future Nostalgia",
+		"year": 2025,
+		"image": "images/Projects/Archive of Future Nostalgia.webp",
+		"description": "Collecting imagined memories of things that have not happened yet, but already feel worth missing.",
+		"story": "Most archives document what has been, but this one tried to preserve what people suspect they will someday miss. It included future train rides, conversations not yet over, and places still ordinary enough to be overlooked. The project sat somewhere between design fiction and emotional forecasting. Its central idea was that nostalgia is often less about the past than about recognizing, too late, what mattered while it was still present."
 	},
 	{
-		"title": "Iusto, incidunt. Totam, illum.",
-		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
-		"description": "Tempore, eveniet minus velit, earum aperiam necessitatibus repellendus provident accusamus illum officiis doloribus, eum saepe est aut numquam distinctio pariatur natus totam repellat. Numquam nulla libero sapiente magnam nostrum ex."
+		"title": "Silent Disco for Houseplants",
+		"year": 2021,
+		"image": "images/Projects/Silent Disco for Houseplants.webp",
+		"description": "Inventing a soundless performance system for plants that deserve better ambiance than passive sunlight.",
+		"story": "Houseplants are expected to perform photosynthesis with minimal emotional support. I found this rude. So I imagined a silent disco format using light pulses, timed shadows, and humidity shifts as a kind of botanical entertainment. The project was unserious in premise but sincere in curiosity, asking what care looks like when it becomes imaginative rather than purely functional. At minimum, it improved the dignity of ferns."
 	}
 ]

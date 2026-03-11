@@ -3,6 +3,23 @@
     import reading from "$lib/reading.json";
     import Project from "$lib/Project.svelte";
     import ReadingItem from "$lib/ReadingItem.svelte";
+    import { onMount } from "svelte";
+
+    let githubData = null; // This will eventually hold our Github stats
+    let loading = true; // This will be true *until* the fetch's promise resolves to a value
+    let error = null; // If the API call resulted in an error, it will go into this variable
+    onMount(async () => {
+        try {
+            console.log("Page has been mounted!")
+            let response = await fetch("https://api.github.com/users/yoyo-yuan");
+            console.log(response);
+            githubData = await response.json();
+            console.log(githubData);
+        } catch (err) {
+            error = err;
+        }
+        loading = false;
+    });
 </script>
 
 <div class="aboutMe">
@@ -26,9 +43,51 @@
     </div>
 </div>
 
+{#if loading}
+    <p>Loading...</p>
+{:else if error}
+    <p>Something went wrong: {error.message}</p>
+{:else}
+    <section>
+        <h2>My GitHub Stats</h2>
+        <dl>
+            <dt>Followers</dt>
+            <dd>{githubData.followers}</dd>
+            <dt>Following</dt>
+            <dd>{githubData.following}</dd>
+            <dt>Public Repositories</dt>
+            <dd>{githubData.public_repos}</dd>
+        </dl>
+    </section>
+{/if}
+
 <h2>Latest projects</h2>
 <div class="projects">
 	{#each projects.slice(0, 3) as p}
         <Project data={p} />
     {/each}
 </div>
+
+<style>
+    dl {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-flow: column;
+        align-items: start;
+        margin-bottom: 3rem;
+    }
+
+    dl > dt {
+        grid-row: 1;
+        text-transform: uppercase;
+        font-size: 1rem;
+        color: gray;
+    }
+
+    dl > dd {
+        grid-row: 2;
+        font-size: 2rem;
+        line-height: 1;
+        font-weight: 150;
+    }
+</style>
