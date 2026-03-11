@@ -1,10 +1,11 @@
 <script>
+    import { base } from "$app/paths";
     export let data = {};
 </script>
 
 <article>
     <h2>{data.title}</h2>
-    <a href={data.link}><img src={data.image} alt=""></a>
+    <a href={base + data.link}><img src={data.image} alt=""></a>
     <p>{data.description}</p>
 </article>
 
