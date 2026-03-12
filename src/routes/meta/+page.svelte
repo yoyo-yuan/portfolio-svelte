@@ -16,8 +16,8 @@
     });
     $: locSummary = d3.rollups(
         locData,
-        v => d3.sum(v, row => row.length),
-        row => row.type
+        v => v.length,
+        v => v.type
     )
         .map(([label, value]) => ({ label, value }));
 </script>

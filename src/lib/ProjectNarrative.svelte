@@ -49,7 +49,7 @@
         width: 100%;
     }
 
-    .img {
+    img {
         width: 100%;
     }
 </style>
