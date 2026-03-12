@@ -86,7 +86,7 @@
 			<h2>Visualization Sketches</h2>
 
       <figure>
-				<img src="images/6.C35 A3 Sketch 1.jpg" alt="Sketch 1" />
+				<img src="images/A3/6.C35 A3 Sketch 1.jpg" alt="Sketch 1" />
 				<figcaption>
 					Cartesian line graph with seasonal segmentation
 				</figcaption>
@@ -128,7 +128,7 @@
 			</ul>
 
 			<figure>
-				<img src="images/6.C35 A3 Sketch 2.jpg" alt="Sketch 2" />
+				<img src="images/A3/6.C35 A3 Sketch 2.jpg" alt="Sketch 2" />
 				<figcaption>
 					Circular line graph with a continuous timeline
 				</figcaption>
@@ -176,7 +176,7 @@
 			</ul>
 
 			<figure>
-				<img src="images/6.C35 A3 Sketch 3.jpg" alt="Sketch 3" />
+				<img src="images/A3/6.C35 A3 Sketch 3.jpg" alt="Sketch 3" />
 				<figcaption>
 					Spherical tally-based visualization resembling the Omicron variant
 				</figcaption>
@@ -231,7 +231,7 @@
 			<h2>Final Visualization Design</h2>
 
 			<figure>
-				<img src="images/6.C35 A3 Final Visualization.png" alt="Final Visualization" />
+				<img src="images/A3/6.C35 A3 Final Visualization.png" alt="Final Visualization" />
 				<figcaption>
 					Stacked polar area chart with a circular month axis and concentric yearly layers
 				</figcaption>

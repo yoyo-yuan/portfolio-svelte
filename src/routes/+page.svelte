@@ -5,6 +5,7 @@
     import ReadingItem from "$lib/ReadingItem.svelte";
     import { onMount } from "svelte";
 
+    let sorted_projects = projects.sort((a, b) => b.year - a.year);
     let githubData = null; // This will eventually hold our Github stats
     let loading = true; // This will be true *until* the fetch's promise resolves to a value
     let error = null; // If the API call resulted in an error, it will go into this variable
@@ -21,6 +22,10 @@
         loading = false;
     });
 </script>
+
+<svelte:head>
+    <title>Yoyo Yuan: Personal site and portfolio</title>
+</svelte:head>
 
 <div class="aboutMe">
     <div class="intro">
@@ -63,7 +68,7 @@
 
 <h2>Latest projects</h2>
 <div class="projects">
-	{#each projects.slice(0, 3) as p}
+	{#each sorted_projects.slice(0, 3) as p}
         <Project data={p} />
     {/each}
 </div>

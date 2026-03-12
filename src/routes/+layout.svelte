@@ -13,7 +13,7 @@
     let colorScheme = "light dark";
     let localStorage = globalThis.localStorage ?? {};
     if (localStorage.colorScheme) { // if localStorage has a colorScheme property
-    colorScheme = localStorage.colorScheme; // override the default colorScheme
+        colorScheme = localStorage.colorScheme; // override the default colorScheme
     }
     let root = globalThis.document?.documentElement;
     $: root?.style.setProperty("color-scheme", colorScheme);
