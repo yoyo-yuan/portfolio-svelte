@@ -6,7 +6,7 @@
 <article>
     <h2>{data.title}</h2>
     <a href={base + data.link}><img src={data.image} alt=""></a>
-    <p>{data.description}</p>
+    <p><strong>{data.year} |</strong> {data.description}</p>
 </article>
 
 <style>
