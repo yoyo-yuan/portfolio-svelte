@@ -1,10 +1,11 @@
 <script>
     import * as d3 from 'd3';
     let width = 500;
-    let height = 300;
+    let height = 220;
     export let data = [];
+    export let title = "";
 
-    let margin = { top: 40, right: 20, bottom: 40, left: 80 };;
+    let margin = { top: 40, right: 100, bottom: 40, left: 80 };;
     let innerWidth  = width  - margin.left - margin.right;
     let innerHeight = height - margin.top  - margin.bottom;
     $: xScale = d3.scaleLinear()
@@ -23,7 +24,7 @@
     $: if (xAxis && yAxis) {
         d3.select(xAxis).call(
             d3.axisBottom(xScale)
-                .tickFormat(d => Number.isInteger(d) ? d : "")
+                .ticks(Math.min(d3.max(data, d => d.value), 10))
         );
         d3.select(yAxis).call(d3.axisLeft(yScale));
     }
@@ -39,7 +40,7 @@
             y={margin.top / 2}
             text-anchor="middle"
             class="chart-title">
-            Lines of Code by Language
+            Lines of Code by Language: {title}
         </text>
         <g transform="translate({margin.left}, {margin.top + innerHeight})"
         bind:this={xAxis} />
@@ -49,7 +50,7 @@
             <!-- x-axis label -->
             <text
                 x={innerWidth / 2}
-                y={innerHeight + margin.bottom + 3}
+                y={innerHeight + margin.bottom}
                 text-anchor="middle"
                 class="axis-label">
                 Lines of Code
@@ -61,7 +62,8 @@
                 text-anchor="middle"
                 transform="rotate(-90)"
                 class="axis-label">
-                Programming Language
+                <tspan x={-(innerHeight / 2) - 8} dy="-1.5em">Programming</tspan>
+                <tspan x={-(innerHeight / 2) - 10} dy="1.2em">Language</tspan>
             </text>
         </g>
         <g transform="translate({margin.left}, {margin.top})">
@@ -85,19 +87,10 @@
                     stroke="currentColor"
                     stroke-width="2"
                 />
-                <!-- leader line -->
-                <line
-                    x1={xScale(maxBar.value) / 2}
-                    y1={yScale(maxBar.label) + yScale.bandwidth()}
-                    x2={xScale(maxBar.value) / 2}
-                    y2={yScale(maxBar.label) + yScale.bandwidth() + 30}
-                    stroke="currentColor"
-                    stroke-width="1"
-                />
                 <!-- annotation text at end of leader line -->
                 <text
-                    x={xScale(maxBar.value) / 2}
-                    y={yScale(maxBar.label) + yScale.bandwidth() + 45}
+                    x={xScale(maxBar.value) + 60}
+                    y={yScale(maxBar.label) + yScale.bandwidth() / 2 + 4}
                     text-anchor="middle"
                     class="annotation">
                     Most lines of code
