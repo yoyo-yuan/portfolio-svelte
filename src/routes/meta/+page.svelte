@@ -221,7 +221,7 @@
     data = {barData}
     title = {selectedCommits.length === 0
         ? "Website Breakdown"
-        : `Lines of Code: ${selectedCommits.length} Selected ${selectedCommits.length === 1 ? "Commit" : "Commits"}`}
+        : `${selectedCommits.length} Selected ${selectedCommits.length === 1 ? "Commit" : "Commits"}`}
 />
 
 <LineChart data={linesByDate} />
