@@ -5,7 +5,7 @@
     export let data = [];
     export let title = "";
 
-    let margin = { top: 40, right: 100, bottom: 40, left: 80 };;
+    let margin = { top: 40, right: 100, bottom: 35, left: 75 };;
     let innerWidth  = width  - margin.left - margin.right;
     let innerHeight = height - margin.top  - margin.bottom;
     $: xScale = d3.scaleLinear()
@@ -144,7 +144,7 @@
     }
 
     .axis-label {
-        font-size: 0.8em;
+        font-size: 0.7em;
         fill: gray;
     }
 

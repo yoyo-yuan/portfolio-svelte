@@ -3,6 +3,7 @@
     import { onMount, tick } from 'svelte';
     import * as d3 from 'd3';
     import BarHorizontal from '../../lib/BarHorizontal.svelte';
+    import LineChart from '../../lib/LineChart.svelte';
     import {
         computePosition,
         autoPlacement,
@@ -35,7 +36,6 @@
         });
         commits = d3.sort(commits, d => -d.totalLines);
     });
-    $: selectedLines = (clickedCommits.length > 0 ? clickedCommits.flatMap(d => d.lines) : locData);
     $: selectedCounts = d3.rollup(
         selectedLines,
         v => v.length,
@@ -45,7 +45,7 @@
     $: barData = allTypes.map(type =>  ({ label: String(type), value: selectedCounts.get(type) || 0 }));
 
     let width = 1000, height = 600;
-    let margin = { top: 40, right: 60, bottom: 40, left: 60 };
+    let margin = { top: 40, right: 20, bottom: 40, left: 60 };
     let usableArea = {
         top: margin.top,
         right: width - margin.right,
@@ -114,6 +114,49 @@
             }
         }
     }
+
+    let svg;
+    $: brushSelection = null;
+    $: {
+        d3.select(svg).call(d3.brush()
+            .extent([[usableArea.left, usableArea.top], [usableArea.right, usableArea.bottom]])
+            .on("start brush end", brushed));
+        d3.select(svg).selectAll(".dots, .overlay ~ *").raise();
+    }
+    function brushed (evt) {
+        brushSelection = evt.selection;
+    }
+    function isCommitBrushed(commit) {
+        if (!brushSelection) {
+            return false;
+        }
+        let min = {x: brushSelection[0][0], y: brushSelection[0][1]};
+        let max = {x: brushSelection[1][0], y: brushSelection[1][1]};
+        let x = xScale(commit.datetime);
+        let y = yScale(commit.hourFrac);
+        return x >= min.x && x <= max.x && y >= min.y && y <= max.y;
+    }
+    $: brushedCommits = brushSelection ? commits.filter(isCommitBrushed) : [];
+    $: selectedCommits = Array.from(new Set([...clickedCommits, ...brushedCommits]));
+    $: selectedLines = (selectedCommits.length > 0 ? selectedCommits : commits).flatMap(d => d.lines);
+
+    let linesByDate = [];
+    $: {
+        // Get the count for each date in the data
+        const rolled = d3.rollups(
+            locData,
+            v => v.length,
+            d => d3.timeDay.floor(d.datetime)
+        ).map(([date, count]) => ({ date, count }));
+        // Get an array of all days covered by the data
+        const [minDate, maxDate] = d3.extent(rolled, d => d.date);
+        const allDays = d3.timeDays(minDate, d3.timeDay.offset(maxDate, 1));
+        // Build linesByDate by filling all undefined dates with 0 counts
+        linesByDate = allDays.map(date => ({
+            date,
+            count: rolled.find(d => d.date.getTime() === date.getTime())?.count ?? 0
+        }));
+    }
 </script>
 
 <svelte:head>
@@ -147,7 +190,7 @@
     <dt>Lines edited</dt>
     <dd>{ hoveredCommit.totalLines }</dd>
 </dl>
-<svg viewBox="0 0 {width} {height}">
+<svg viewBox="0 0 {width} {height}" bind:this={svg}>
     <text
         x={width / 2}
         y={margin.top / 2}
@@ -161,7 +204,7 @@
     <g class="dots">
         {#each commits as commit, index }
             <circle
-                class:selected={ clickedCommits.includes(commit) }
+                class:selected={ selectedCommits.includes(commit) }
                 on:click={ evt => dotInteraction(index, evt) }
                 on:mouseenter={evt => dotInteraction(index, evt)}
 	            on:mouseleave={evt => dotInteraction(index, evt)}
@@ -174,7 +217,14 @@
     </g>
 </svg>
 
-<BarHorizontal data={barData} title = {clickedCommits.length == 0 ? "Website Breakdown" : "Selected Commits"}/>
+<BarHorizontal
+    data = {barData}
+    title = {selectedCommits.length === 0
+        ? "Website Breakdown"
+        : `Lines of Code: ${selectedCommits.length} Selected ${selectedCommits.length === 1 ? "Commit" : "Commits"}`}
+/>
+
+<LineChart data={linesByDate} />
 
 
 <style>
@@ -239,5 +289,19 @@
         font-size: 30px;
         font-weight: bold;
         fill: currentColor;
+    }
+
+    @keyframes marching-ants {
+        to {
+            stroke-dashoffset: -8; /* 5 + 3 */
+        }
+    }
+
+    svg :global(.selection) {
+        fill-opacity: 10%;
+        stroke: black;
+        stroke-opacity: 70%;
+        stroke-dasharray: 5 3;
+        animation: marching-ants 2s linear infinite;
     }
 </style>
