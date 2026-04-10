@@ -1,5 +1,13 @@
 [
 	{
+		"title": "🚴‍♀️ BikeWatch",
+		"link": "https://yoyo-yuan.github.io/bikewatching/",
+		"year": 2026,
+		"image": "images/Projects/BikeWatch.png",
+		"description": "Visualize bike traffic in the Boston area",
+		"story": "I built BikeWatch to explore how bike activity changes across Boston and Cambridge throughout the day. Using Bluebikes trip data, I created an interactive map that lets users see which stations are busiest at different times and whether they have more arrivals or departures. The project combines Svelte, Mapbox, and D3 to turn raw trip records into a more intuitive view of urban mobility patterns."
+	},
+	{
 		"title": "6.C35 A2: Exploratory Data Analysis",
 		"link": "/A2",
 		"year": 2026,
