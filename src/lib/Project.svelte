@@ -5,7 +5,7 @@
 
 <article>
     <h2>{data.title}</h2>
-    <a href={base + data.link}><img src={data.image} alt=""></a>
+    <a href={data.url.startsWith("http") ? data.url : base+data.url}><img src={data.image} alt=""></a>
     <p><strong>{data.year} |</strong> {data.description}</p>
 </article>
 

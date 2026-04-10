@@ -1,7 +1,7 @@
 [
 	{
 		"title": "🚴‍♀️ BikeWatch",
-		"link": "https://yoyo-yuan.github.io/bikewatching/",
+		"url": "https://yoyo-yuan.github.io/bikewatching/",
 		"year": 2026,
 		"image": "images/Projects/BikeWatch.png",
 		"description": "Visualize bike traffic in the Boston area",
@@ -9,7 +9,7 @@
 	},
 	{
 		"title": "6.C35 A2: Exploratory Data Analysis",
-		"link": "/A2",
+		"url": "/A2",
 		"year": 2026,
 		"image": "images/A2/Avg Corp Own Rate vs. Race Distribution.png",
 		"description": "Exploratory data analysis of Boston housing ownership (2004 to 2024) that visualizes how corporate-owned and owner-occupied rates shift over time and across neighborhoods.",
@@ -17,7 +17,7 @@
 	},
 	{
 		"title": "6.C35 A3: Visualization Critique & Redesign",
-		"link": "/A3",
+		"url": "/A3",
 		"year": 2026,
 		"image": "images/A3/6.C35 A3 Final Visualization.png",
 		"description": "Critiqued and redesigned a COVID-19 data visualization, using iterative sketching and visual analysis to improve interpretability,temporal comparison, and communication of magnitude.",
@@ -25,7 +25,7 @@
 	},
 	{
 		"title": "6.C35 A4: Persuasive or Deceptive Visualization?",
-		"link": "/A4",
+		"url": "/A4",
 		"year": 2026,
 		"image": "images/A4/For the Proposition Visualization.png",
 		"description": "Designed contrasting visualizations from the same dataset to examine how distinct design choices can support different narratives while raising questions about visualization ethics.",
