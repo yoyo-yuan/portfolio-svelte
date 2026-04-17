@@ -174,6 +174,8 @@
     hidden={hoveredIndex === -1}
     bind:this={commitTooltip}
     style="top: {tooltipPosition.y}px; left: {tooltipPosition.x}px"
+    role="tooltip"
+    id="commit-tooltip"
 >
     <dt>Commit</dt>
     <dd><a href={ hoveredCommit.url } target="_blank">{ hoveredCommit.id }</a></dd>
@@ -212,6 +214,18 @@
                 cy={ yScale(commit.hourFrac) }
                 r={ rScale(commit.totalLines) }
                 fill="steelblue"
+                tabindex="0"
+                role="button"
+                aria-describedby="commit-tooltip"
+                aria-haspopup="true"
+                on:focus={(evt) => dotInteraction(index, evt)}
+                on:blur={(evt) => dotInteraction(index, evt)}
+                on:keydown={(evt) => {
+                    if (evt.key === 'Enter' || evt.key === ' ') {
+                        evt.preventDefault();
+                        dotInteraction(index, evt);
+                    }
+                }}
             />
         {/each}
     </g>
